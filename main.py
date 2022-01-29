@@ -125,10 +125,9 @@ output = {}
 
 for dictionary in dict_list:
     for key, val in dictionary.items():
-        if dictionary[key] not in output:
+        if key not in output:
             output[key] = val
-    
         else:
-            output[key] = dictionary[key] + val
+            output[key] += val
 
 print(output)
